@@ -27,6 +27,8 @@ GHKeys('axvm')
 => #array of strings
 ```
 
+Each key will be wrapped into SSHKey class. It gives you ability to calculate md5\sha1\sha256 fingerprints. If key is corrupted or invalid, `IncorrectOrCorruptedKey` exception will be raised.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/axvm/ghkeys.

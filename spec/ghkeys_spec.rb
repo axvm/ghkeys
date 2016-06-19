@@ -24,4 +24,25 @@ describe GHKeys do
     end
   end
 
+  describe '#parse' do
+    let(:keys) {
+      [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFJeIjHeSYD+ixTyfU4fokAYpTb5ZCkLFJQiCXrWR0U0ZiEStZ1FpEk8p8zj4AkFcZPGXkBJ52Yk8kne78GoBbMvNRadgcWY6k2BLf+9g9UfmRgXCyrVJWUSHnnCyY1RX4/mT+uQ3fTpOITg2s8ZqSavWblAkZPrutf83DIkg8Z313iGagaXtyLLYsLK7iUOkVsZ0sgKrSFVrBONv68q1cl/XB8zd295rvGS2QXsB07/8c4X88tF37muY5rXHXYYSwlxO9PWzNFpVIuVr4hPNEoLt7i41y+S575DTPX8zP5eE2wIfHliuAsGRv7t/NVW5YiRaVEn0yL25tcbEiVtMv",
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFJeIjHeSYD+ixTyfU4fokAYpTb5ZCkLFJQiCXrWR0U0ZiEStZ1FpEk8p8zj4AkFcZPGXkBJ52Yk8kne78GoBbMvNRadgcWY6k2BLf+9g9UfmRgXCyrVJWUSHnnCyY1RX4/mT+uQ3fTpOITg2s8ZqSavWblAkZPrutf83DIkg8Z313iGagaXtyLLYsLK7iUOkVsZ0sgKrSFVrBONv68q1cl/XB8zd295rvGS2QXsB07/8c4X88tF37muY5rXHXYYSwlxO9PWzNFpVIuVr4hPNEoLt7i41y+S575DTPX8zP5eE2wIfHliuAsGRv7t/NVW5YiRaVEn0yL25tcbEiVtMv"
+      ]
+    }
+
+    it 'returns wrapped keys' do
+      expect(GHKeys.parse(keys)).to be_an_instance_of(Array)
+    end
+
+    it 'returns empty array' do
+      ar = []
+      res = GHKeys.parse(ar)
+
+      expect(res).to be_an_instance_of(Array)
+      expect(res).to eq(ar)
+    end
+  end
+
 end

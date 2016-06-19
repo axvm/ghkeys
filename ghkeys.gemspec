@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
   spec.add_dependency "httparty", "~> 0.13.7"
+  spec.add_dependency "sshkey", "~> 1.8.0"
 end
