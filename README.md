@@ -1,4 +1,4 @@
-# Ghkeys
+# GHKeys - GitHub Keys
 
 GitHub Keys gem allows you to fetch users keys in the simplest way. It uses web scraping because of GH API limits.
 
